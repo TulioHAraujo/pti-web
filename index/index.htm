@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrição Funcional</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilo geral */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333; /* Preto para o texto */
+            background: #e0f7fa; /* Azul claro para o fundo */
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: #00ac3f;
+            color: #fff; /* Branco para o texto */
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .cta {
+            margin-top: 20px;
+        }
+
+        .cta h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #fff; /* Branco para o título */
+        }
+
+        .cta .btn {
+            background: #0ecd6d; /* Verde médio */
+            color: #fff; /* Branco para o texto do botão */
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .cta .btn:hover {
+            background: #0277bd; /* Azul escuro para o botão ao passar o mouse */
+        }
+
+        /* Seções */
+        section {
+            padding: 40px 0;
+            background: #ffffff; /* Branco para o fundo das seções */
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #02bd1e; /* Verde para os títulos */
+        }
+
+        /* Serviços */
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .service {
+            flex: 1;
+            padding: 20px;
+            background: #b3fcd7; /* Verde clarinho para os serviços */
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Mudanças e resultados */
+        .gallery {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 10px;
+            padding: 20px;
+            background: #ffffff; /* Branco para o fundo da galeria */
+            align-items: center;
+        }
+
+        .gallery::-webkit-scrollbar {
+            display: none; /* Ocultar a barra de rolagem em WebKit browsers */
+        }
+
+        .gallery-img {
+            flex: 0 0 auto;
+            width: 400px; /* Ajuste o tamanho da imagem conforme necessário */
+            height: auto;
+            border-radius: 10px;
+            scroll-snap-align: start;
+            
+        }
+
+        /* Depoimentos */
+        .testimonials {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .testimonial {
+            background: #b3fcd7; /* Verde clarinho para depoimentos */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            color: #333; /* Preto para o texto */
+        }
+
+        /* Informações de Contato */
+        .contact-info {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            color: #0277bd; /* Azul escuro para links */
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: #01579b; /* Azul mais escuro ao passar o mouse */
+            text-decoration: underline;
+        }
+
+        /* Crédito ao Criador */
+        #crédito {
+            background: #07af5b; /* Azul escuro */
+            color: #fff; /* Branco para o texto */
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* Formulário */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        form label {
+            font-weight: bold;
+            color: #333; /* Preto para os rótulos */
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            border: 1px solid #b3fcd7; /* Verde claro para a borda dos campos */
+            border-radius: 5px;
+        }
+
+        form button {
+            background: #07af5b; /* Azul médio para o botão */
+            color: #fff; /* Branco para o texto do botão */
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background: #0277bd; /* Azul escuro para o botão ao passar o mouse */
+        }
+
+        /* Rodapé */
+        footer {
+            background: #07af5b; /* Verde escuro */
+            color: #fff; /* Branco para o texto */
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer .social-links a {
+            color: #fff; /* Branco para os links sociais */
+            margin: 0 10px;
+        }
+
+        footer .social-links a:hover {
+            color: #b3e5fc; /* Azul claro ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <div class="logo">Nutrição Funcional</div>
+            <div class="cta">
+                <h1>Conquiste seus objetivos com um nutricionista online</h1>
+                <a href="#contato" class="btn">Solicite um Orçamento</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sobre o Nutricionista -->
+    <section id="sobre">
+        <div class="container">
+            <h2>Sobre o Nutricionista</h2>
+            <p>Buscando uma alimentação equilibrada e personalizada? Conte comigo! Com mais de 10 anos de experiência, ofereço um acompanhamento nutricional online completo, adaptado às suas necessidades e objetivos. Através de um plano alimentar individualizado e acompanhamento regular, você terá o suporte necessário para transformar seus hábitos alimentares e alcançar uma vida mais saudável e equilibrada.</p>
+        </div>
+    </section>
+
+    <!-- Serviços Oferecidos -->
+    <section id="serviços">
+        <div class="container">
+            <h2>Serviços Oferecidos</h2>
+            <div class="services">
+                <div class="service">Plano Alimentar Individualizado</div>
+                <div class="service">Acompanhamento Regular</div>
+                <div class="service">Saúde e Bem-estar</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria de Trabalhos -->
+    <section id="galeria">
+        <div class="container">
+            <h2>Nossos pacientes</h2>
+            <div class="gallery">
+                <img src="imagens/img1.jfif" alt="Trabalho 1" class="gallery-img">
+                <img src="imagens/img2.jfif" alt="Trabalho 2" class="gallery-img">
+                <img src="imagens/img3.jfif" alt="Trabalho 3" class="gallery-img">
+                <img src="imagens/img4.jfif" alt="Trabalho 4" class="gallery-img">
+                <img src="imagens/img5.jpg" alt="Trabalho 5" class="gallery-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos de Clientes -->
+    <section id="depoimentos">
+        <div class="container">
+            <h2>Comentários</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p>"Amei a experiência! Desde o início, consegui ficar super à vontade para falar sobre meus objetivos e minhas dificuldades."</p>
+                    <p><strong>Karla Silva</strong></p>
+                </div>
+                <div class="testimonial">
+                    <p>"Seu conhecimento sobre nutrição é evidente em cada consulta. Me ajudou a entender a importância de cada alimento e como eles atuam no meu corpo."</p>
+                    <p><strong>Maria Oliveira</strong></p>
+                </div>
+                <div class="testimonial">
+                    <p>"Consegui alcançar meu objetivo sem sofrer! Experiência fantástica, recomendo à todos que querem melhorar seu shape."</p>
+                    <p><strong>Pedro Costa</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Informações de Contato -->
+    <section id="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <form>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+            <div class="contact-info">
+                <h3>Informações de Contato</h3>
+                <p>Telefone: <a href="tel:+551150686789">(64) 5068-6789</a></p>
+                <p>Av. Natalício Mesquita lima s/n Qd.16 Lt.3 - Jardim Campestre, Rio Verde - GO, 75907-679</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crédito ao Criador -->
+    <section id="crédito">
+        <div class="container">
+            <p>Desenvolvido por Túlio Araujo</p>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Bemarking</p>
+        </div>
+    </footer>
+</body>
+</html>
